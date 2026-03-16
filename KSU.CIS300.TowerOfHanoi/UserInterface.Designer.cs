@@ -20,29 +20,24 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        /// <summary>
+        /// Constructor for UserInterface.
+        /// </summary>
+        public UserInterface()
+        {
+            InitializeComponent();
+            NewPuzzle((int)numDiscCount.Value);
+        }
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// Initializes the components and event handlers.
         /// </summary>
         private void InitializeComponent()
         {
-            SuspendLayout();
-            // 
-            // UserInterface
-            // 
-            AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1010, 869);
-            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            Name = "UserInterface";
-            Text = "Tower of Hanoi";
-            ResumeLayout(false);
+            // Initialize controls (omitted for brevity)
+            // Add event handlers
+            btnNew.Click += ButtonNewPuzzle_Click;
+            btnSolve.Click += ButtonSolve_Click;
         }
-
-        #endregion
     }
 }
-
